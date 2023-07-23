@@ -1,0 +1,28 @@
+<p>profile works!</p>
+
+<button (click)="loadHome()">Go to home component</button>
+<button (click)="loadBlog()">Go to blog component</button>
+
+
+<div class="contrainer">
+    <div class="userslist">
+
+        <table>
+            <tr>
+                <th>id</th>
+                <th>user-id</th>
+                <th>title</th>
+                <th>body</th>
+            </tr>
+            <tr *ngFor="let user of usersdata">
+                <td>{{user.id}}</td>
+                <td>{{user.userId}}</td>
+                <td>{{user.title}}</td>
+                <td>{{user.body}}</td>
+            </tr>
+
+        </table>
+
+
+    </div>
+</div>
