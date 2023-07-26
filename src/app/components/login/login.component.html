@@ -1,0 +1,20 @@
+<h4>User Login</h4>
+
+
+<div class="form">
+<form #form="ngForm"  (ngSubmit)="onSubmit()">
+    <label for="fname">First name : </label>
+    <input type="text" id="fname" class="form-controll"  name="firstname" required ngModel placeholder="enter your first name"><br><br>
+    <span *ngIf="form.controls['firstname'] && !form.controls['firstname'].valid && form.controls['firstname'].touched">Please enter valid First name</span><br><br>
+    <label for="lname">Last Name:</label> 
+    <input type="text" id="lname"  name="lastname" placeholder="last name" ngModel required #lname="ngModel"><br><br>
+    <span *ngIf="lname.invalid && lname.touched">please Enter last name</span><br><br>
+    <label for="email">Email:
+        <input type="email" id="email" name="email" ngModel required email placeholder="Email" #email="ngModel"><br><br>
+        <span *ngIf="email.invalid && email.touched">Please enter a valid email</span><br><br>
+      </label>
+      <input type="submit" value="Submit" [disabled]="!form.valid">
+    </form>
+
+
+</div>

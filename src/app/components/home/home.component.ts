@@ -19,5 +19,6 @@ export class HomeComponent {
   loadBlog(){
 this.route.navigate(['blogs'])
   }
+sum?:String
 
 }
