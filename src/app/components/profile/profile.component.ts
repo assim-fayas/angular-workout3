@@ -18,9 +18,6 @@ export class ProfileComponent {
     this.userdata.getUserDetails().subscribe((res:any)=>{
       
     this.usersdata=res
-    console.log(this.usersdata);
-    
-      
         },(error:any)=>{
           console.error('error fetching user details:',error);
           

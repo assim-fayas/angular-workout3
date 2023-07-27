@@ -1,4 +1,4 @@
-import { Component,ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -9,15 +9,29 @@ import { NgForm } from '@angular/forms';
 export class LoginComponent {
 
 
-@ViewChild('form') loginForm!:NgForm
+  @ViewChild('form') loginForm!: NgForm
 
-  onSubmit(){
-   console.log(this.loginForm);
-   
-    
+  onSubmit() {
+    console.log(this.loginForm);
+
+
+  }
+
+  gender:String="male"
+
+  address!:string
+  fillData(){
+    this.loginForm.form.setValue({
+        userData:{
+          firstname:"Asim ",
+          lastname:"Fayas"
+        },
+        email:"asim1fayas@gmail.com",
+        gender:"female",
+        address:"address ...."
+      })
   }
 
 
 
-  
 }
